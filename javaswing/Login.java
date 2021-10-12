@@ -9,8 +9,13 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
 
+
+	
 public class Login extends JFrame { //jframe 상속
 	public Login() {
 		JPanel panel = new JPanel();
@@ -19,6 +24,8 @@ public class Login extends JFrame { //jframe 상속
 		JTextField txtID = new JTextField(10);
 		JPasswordField txtPWD = new JPasswordField(10);
 		JButton logBtn = new JButton("Log in");
+	
+		
 		
 		panel.add(label); //패널에 레이블 추가
 		panel.add(txtID); //레이블에 txtID필드 출가
@@ -26,6 +33,10 @@ public class Login extends JFrame { //jframe 상속
 		panel.add(txtPWD); //패널에 패스워드 텍스트 필드 추가
 		panel.add(logBtn); //패널에 로그인 버튼 추가
 		add(panel); //패널을 프레임에 추가
+		
+
+	
+		
 		
 		logBtn.addActionListener(new ActionListener() {
 			
@@ -36,6 +47,8 @@ public class Login extends JFrame { //jframe 상속
 				
 				if(id.equals(txtID.getText()) && password.equals(txtPWD.getText())) {
 					JOptionPane.showMessageDialog(null, "로그인 성공!!"); //팝업 다이얼로그
+					UserInfo ui = new UserInfo();
+					dispose();
 				} else {
 					JOptionPane.showMessageDialog(null, "로그인 실패!!");
 				}
