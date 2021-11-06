@@ -113,7 +113,7 @@ public class Update implements ActionListener, MouseListener {
 					dbc = DBConnection.getInstance();
 					StringBuilder sql = new StringBuilder();
 					sql.append("UPDATE address_book ");
-					sql.append(" SET  name = ?, address = ?, phone = ?, mem_relation = ?, gender = ?, birth = ?");
+					sql.append(" SET  name = ?, address = ?, phone = ?, mem_relation = ?, gender = ?, birth = ? ");
 					sql.append(" WHERE id = ?  ");
 					try {
 						dbc.setCon(dbc.getConnection());
@@ -131,6 +131,8 @@ public class Update implements ActionListener, MouseListener {
 								dbc.getPstmt().setString(4, memRelation);
 								String gender = menuView.getTextField_4().getText();
 								dbc.getPstmt().setString(5, gender);
+								String birth = menuView.getTextField_5().getText();
+								dbc.getPstmt().setString(6, birth);
 								dbc.getPstmt().setInt(7, findID);
 								dbc.getPstmt().executeUpdate();
 								JOptionPane.showMessageDialog(null, "정보가 수정되었습니다.");
