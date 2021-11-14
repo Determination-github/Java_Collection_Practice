@@ -12,4 +12,8 @@
 6. [MapPractice] 클래스는 자바의 Collection 중 map을 활용해 데이터를 처리하는 것을 연습한 클래스입니다.
 
 
+## 📑 블로그
+자바의 자료구조와 Collection에 대한 간단한 개념 정리는 다음 블로그에 정리해두었습니다.
+https://determination.tistory.com/entry/%EC%9E%90%EB%B0%94-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-Java-Collection-FrameworkJCF-%EC%B4%88%EA%B0%84%EB%8B%A8-%EC%89%BD%EA%B2%8C-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0
+
 
